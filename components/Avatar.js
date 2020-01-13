@@ -38,7 +38,9 @@ class Avatar extends React.Component {
   }
 
   render() {
-    return <Image source={{ uri: this.state.photo }} />;
+    return this.state.photo ? (
+      <Image source={{ uri: this.state.photo }} />
+    ) : null;
   }
 }
 
